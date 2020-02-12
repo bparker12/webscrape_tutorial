@@ -1,5 +1,4 @@
 import requests
-from requests import get
 from requests.exceptions import RequestException
 from contextlib import closing
 from bs4 import BeautifulSoup
@@ -11,7 +10,7 @@ def simple_get(url):
     text content, otherwise return None.
     """
     try:
-        with closing(get(url, stream=True)) as resp:
+        with closing(requests.get(url, stream=True)) as resp:
             if is_good_response(resp):
                 return resp.content
             else:
