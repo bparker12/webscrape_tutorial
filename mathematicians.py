@@ -1,3 +1,5 @@
+#https://realpython.com/python-web-scraping-practical-introduction/ = site used for this demo
+
 import requests
 from requests.exceptions import RequestException
 from contextlib import closing
